@@ -60,10 +60,11 @@ app.get('/whoami', (req, res)=>{
 });
 
 app.get('/books', (req, res)=>{
-    res.status(200).send(books);
     res.status(!200).send({
         "message": "request was unsuccessful"
     });
+    res.status(200).send(books);
+   
 });
 
 
