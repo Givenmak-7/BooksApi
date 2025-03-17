@@ -161,7 +161,7 @@ app.delete('/books/:id', (req, res)=>{
         });
     }
 });
-app.delete('/books/:id/:detailId', (req, res) => {
+app.delete('/books/:id/details/:detailId', (req, res) => {
     const book_id = req.params.id;
     const detail_id = req.params.detailId;
     const book = books.find(b => b.id === book_id);
